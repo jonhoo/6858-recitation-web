@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Iframes and form targets</title>
+    </head>
+    <body>
+        <iframe name="f" width="800" height="315" src="http://127.0.0.1:8081/zoobar/index.cgi/users"></iframe>
+        <form action="http://127.0.0.1:8081/zoobar/index.cgi/users" method="get" target="f">
+            <input type="text" name="user" value="admin" />
+            <input type="submit" value="Lookup user" />
+        </form>
+    </body>
+</html>

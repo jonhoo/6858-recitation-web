@@ -1,0 +1,95 @@
+"what's the big picture?"; lab4 = phishing
+Why localhost, not IP? Because grader has different IP.
+
+11x worm & replication
+10x what is/why content sniffing?
+ - incorrect file endings
+ - why HTML specifically?
+ - how does executable code in images work?
+ - why not just have executable/non-executable?
+7x use console (Firebug not necessary)
+6x race-condition (need to wait for transfer req to complete)
+6x what is a "scanner"? automated tools for finding vuln in JS?
+ - Grabber, Vega, ZAP, SQLMap, ...
+5x why not just better browser protection?
+ - Why not remove bad features (backward compatability)
+ - Different browser = different security? Yes!
+ - Cross-frame things hard in modern browsers:
+   - XSS protection (only reflected)
+   - httponly cookies
+   - X-Frame-Options
+   - HSTS
+   - CSP
+   - SRI (load JS from CDN)
+5x SOP bypass (information still allowed?)
+ - Allowed to load resources from remote origin, but can't view content
+ - Remote scripts/styles are still evaluated!
+ - = "Side-channel" (another 5x)
+5x how to avoid URL showing up (+ challenge = another injection)
+ - <iframe>s
+ - for challenge, XSS without changing URL?
+4x do frameworks mean don't have to think about sec?
+4x Firefox on Ubuntu 12.04 vs other Firefox
+ - Reference images (from PhantomJS) are what count, manual checks in Firefox
+ - Any Firefox likely to work fine, but should check in VM
+3x form + iframe
+ - target=""
+3x Stored XSS vs reflected XSS
+2x e-mail script; "javascript:void((new Image())"
+
+2x how to inject JS code without editing files?
+2x OWASP 10 actually used? could these attacks be used in the wild?
+2x "prefix URLs"
+2x how to hide tracks? can't sender tell that they lose money?
+2x {{ }} in templates (general flask temp. syntax)
+2x protection against these attacks?
+"Cancel" outstanding requests (#11)
+
+DB queries from terminal?
+csrf useful unless controlling big site?
+famous examples of these exploits?
+csrf - just read token (no, SOP. yes if XSS). also, not *instead* of cookies!
+how to give attacker money? transfer?
+how is 12 not trivial? i.e. why would use be confused after submitting form that intercepts and sniffs user/pass?
+CSRF = SOP bypass? (no, iframe is just to hide, could do without)
+What is "file:///"? Flow of grader?
+"Forward login?"
+cookie sufficient for impersonation?
+why are third-party cookies bad?
+DNS rebinding
+"why is profile worm named worm?"
+why not SOP for paths?
+can you detect where submit of form comes from?
+attacker sniff browser-stored credentials?
+is sanitization enough for XSS?
+why does e-mail not have MIME content problems?
+Unvalidated redirects
+Character set handling
+OWASP 10 - all seem similar?
+OWASP 10 - vary depending on sector?
+OWASP 10 - Insecure Direct Object References = not check auth?
+OWASP 10 - Why not DoS? Not a vuln!
+BOM still a problem?
+Why still IE? Especially IE6?
+best way to create CAPTCHA
+why meta with MIME in disks on file?
+parent window vs child window permissions
+VPN sufficient to protect against internal network attacks?
+content sniffing a problem for AJAX?
+
+diagrams?
+"How can we tell that the server is executing our code?"
+difference between server on a local network and deploy globally
+hiding tracks = "who the attacker is"?
+white-list vs black-list
+all attacks done in JS?
+protect against alert() show cookie??
+synchronize network requests for CSRF???
+XSS remote execution??
+OWASP 10 - privilege separation == sec misconfiguration? (no, former is a *tool*)
+serialization failures??
+2x prohibited ports (XMLHttpRequest only to set ports)
+"allow all websites to access any arbitrary file on client's computer?" ??
+remote method calls between client and server = RPC??
+
+"Why not lab 4 at the beginning?" jserrino@mit.edu
