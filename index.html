@@ -759,20 +759,20 @@ SEC:
 			<li>Cache sniffing (doc already loaded?)
 			<li>DNS sniffing (domain already resolved?)
 			<li>Parsing bugs (Shell Shock)
-			<li>Read <a href="http://css.csail.mit.edu/6.858/2015/lec/l09-web-defenses.txt">last year's lecture notes</a>
+			<li>Read <a href="http://css.csail.mit.edu/6.858/2015/lec/l09-web-defenses.txt">2015's lecture notes</a>
 		</ul>
 	</section>
 	<section class="slide">
 		<h2>Defenses</h2>
 		<ul>
-			<li>httponly cookies
+			<li>httponly and <a href="https://scotthelme.co.uk/csrf-is-dead/">same-site</a> cookies
 			<li>XSS protection (don't echo back from URL)
 			<li>Cookieless domains and stateless cookies
 			<li><code>postMessage()</code> (also hard to get right)
 			<li><tt>X-Frame-Options</tt> (e.g., don't allow in frame)
 			<li>Content Security Policy (e.g., don't run inline JS)
 			<li>Sub-Resource Integrity (e.g., don't load bad jQuery)
-			<li>Again, read <a href="http://css.csail.mit.edu/6.858/2015/lec/l09-web-defenses.txt">last year's lecture notes</a>
+			<li>Again, read <a href="http://css.csail.mit.edu/6.858/2015/lec/l09-web-defenses.txt">2015's lecture notes</a>
 		</ul>
 	</section>
 
